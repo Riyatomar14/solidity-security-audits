@@ -15,3 +15,9 @@ $ sudo mkdir data
 $ cd data
 
 $ sudo vi MyContracts.sol
+
+Run this smart contract in the docker image we just pulled : docker run -it --rm -v $PWD:/data devopstestlab/solgraph
+
+you can see image by : xdg-open MyContracts.sol.png
+
+
