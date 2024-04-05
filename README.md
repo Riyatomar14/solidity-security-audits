@@ -11,5 +11,7 @@
 # create the smart contract in solidity:
 
 $ sudo mkdir data
+
 $ cd data
+
 $ sudo vi MyContracts.sol
