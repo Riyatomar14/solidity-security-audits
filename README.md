@@ -7,7 +7,6 @@
 * Pull https://www.npmjs.com/package/solgraph : docker pull devopstestlab/solgraph
   
 
-
 # create the smart contract in solidity:
 
 $ sudo mkdir data
@@ -20,6 +19,7 @@ Run this smart contract in the docker image we just pulled : docker run -it --rm
 
 you can see image by : xdg-open MyContracts.sol.png
 
+![Screenshot 2024-04-06 012012](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/9333164e-74d5-4908-a160-c719473c4570)
 
 # Slither steps-
 
@@ -29,10 +29,9 @@ you can see image by : xdg-open MyContracts.sol.png
 
 ![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/75199822-99bc-4346-903b-2f347c3d9eaa)
 
-
 * Now open another terminal
 
-* Go to the root directory of the contract file (in my case Data)
+* Go to the root directory of the contract file (in my case data)
 
 use cmd : sudo docker container ls to find container id
 
@@ -44,6 +43,8 @@ sudo docker cp < path to solidity(flatten) file > “put-containner-id”:/<cont
 Or
 
 sudo docker cp $(pwd)/filename.sol “put-containner-id”:/home/ethsec
+
+![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/4776a796-6fcc-4c57-a1cd-3748024b3b0c)
 
 * It has basically three components
 * 
