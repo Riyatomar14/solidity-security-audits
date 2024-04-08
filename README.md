@@ -20,7 +20,6 @@ Run this smart contract in the docker image we just pulled : docker run -it --rm
 
 you can see image by : xdg-open MyContracts.sol.png
 
-![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/75199822-99bc-4346-903b-2f347c3d9eaa)
 
 # Slither steps-
 
@@ -28,7 +27,8 @@ you can see image by : xdg-open MyContracts.sol.png
 
 * Run it : docker run -it --rm -v $PWD:/data trailofbits/eth-security-toolbox
 
-![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/0663621e-edd5-4e42-8ae0-03dfa9f7b423)
+![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/75199822-99bc-4346-903b-2f347c3d9eaa)
+
 
 * Now open another terminal
 
