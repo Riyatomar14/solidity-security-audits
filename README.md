@@ -60,6 +60,8 @@ Go to the first terminal where the container environment is running. And, write 
 
 slither filename.sol
 
+![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/ec16745a-b262-474c-bd31-e5e7159c2875)
+
 * The second command we will run is:
   
 slither-check-erc filename.sol <contract name in code>
