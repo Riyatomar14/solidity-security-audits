@@ -20,7 +20,7 @@ Run this smart contract in the docker image we just pulled : docker run -it --rm
 
 you can see image by : xdg-open MyContracts.sol.png
 
-![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/fe368de5-479c-4405-910e-d9f399d72cba)
+![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/75199822-99bc-4346-903b-2f347c3d9eaa)
 
 # Slither steps-
 
