@@ -47,7 +47,7 @@ sudo docker cp $(pwd)/filename.sol “put-containner-id”:/home/ethsec
 ![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/4776a796-6fcc-4c57-a1cd-3748024b3b0c)
 
 * It has basically three components
-* 
+
 i. solidity contract file path
 
 ii. container id (which we received from last command)
