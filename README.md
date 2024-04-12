@@ -259,6 +259,35 @@ Navigate to the directory where your solidity contracts are written & execute th
     surya describe mycontract.sol
     ```
     ![image](https://github.com/lakshya-chopra/solidity-sec-audit/assets/77010972/e05d45e1-187d-482c-8c7f-3f34e5e79e89)
+    
+# 4. Manticore steps- 
+
+## pull the docker image for manticore
+
+         sudo docker pull trailofbits/manticore
+    
+![image](https://github.com/RupeshKumar4511/Blockchain-Technology/assets/149661006/0175889b-ab4b-421b-9694-90cdf20570c8)
+
+## make a directory
+   
+      mkdir audits2
+   
+## change the directory
+   
+      cd audits2
+   
+## run the command
+   
+      vim -vi
+   
+## And then write the smart contract and save the contract file with .sol extension.(for example Storage.sol)
+   
+![image](https://github.com/RupeshKumar4511/Blockchain-Technology/assets/149661006/fa046006-a95b-4cc9-ad4c-ffdf3bb0f7ec)
+
+
+## Then run command
+   
+    manticore Storage.sol 
 
 
 
