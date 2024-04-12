@@ -15,13 +15,13 @@ docker pull devopstestlab/solgraph
 # create the smart contract in solidity:
 
 ```
-$ sudo mkdir data
+sudo mkdir data
 ```
 ```
-$ cd data
+cd data
 ```
 ```
-$ sudo vi MyContracts.sol
+sudo vi MyContracts.sol
 ```
 
 Run this smart contract in the docker image we just pulled : 
