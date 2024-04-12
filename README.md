@@ -113,8 +113,90 @@ slither-check-erc filename.sol <contract name in code>
 
 for more info : https://mythril-classic.readthedocs.io/en/master/installation.html
 
+## PyPI on Ubuntu
 
+```
+# Update
+sudo apt update
 
+# Install solc
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:ethereum/ethereum
+sudo apt install solc
+
+# Install libssl-dev, python3-dev, and python3-pip
+sudo apt install libssl-dev python3-dev python3-pip
+
+# Install mythril
+pip3 install mythril
+myth version
+```
+
+## Docker
+
+```
+# Pull the latest release of mythril/myth
+$ docker pull mythril/myth
+```
+
+## Use docker run mythril/myth the same way you would use the myth command
+
+```
+docker run mythril/myth --help
+docker run mythril/myth disassemble -c "0x6060"
+```
+## To pass a file from your host machine to the dockerized Mythril, you must mount its containing folder to the container properly. For contract.sol in the current working directory, do:
+
+```
+contract Exceptions {
+
+    uint256[8] myarray;
+    uint counter = 0;
+    function assert1() public pure {
+        uint256 i = 1;
+        assert(i == 0);
+    }
+    function counter_increase() public {
+        counter+=1;
+    }
+    function assert5(uint input_x) public view{
+        require(counter>2);
+        assert(input_x > 10);
+    }
+    function assert2() public pure {
+        uint256 i = 1;
+        assert(i > 0);
+    }
+
+    function assert3(uint256 input) public pure {
+        assert(input != 23);
+    }
+
+    function require_is_fine(uint256 input) public pure {
+        require(input != 23);
+    }
+
+    function this_is_fine(uint256 input) public pure {
+        if (input > 0) {
+            uint256 i = 1/input;
+        }
+    }
+
+    function this_is_find_2(uint256 index) public view {
+        if (index < 8) {
+            uint256 i = myarray[index];
+        }
+    }
+
+}
+```
+
+## To pass a file from your host machine to the dockerized Mythril, you must mount its containing folder to the container properly. For contract.sol in the current working directory, do:
+
+```
+docker run -v $(pwd):/tmp mythril/myth analyze /tmp/Riya.sol
+```
+*(in my case my directory--> Riya)
 
 # 4. Surya steps-
 
