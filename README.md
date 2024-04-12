@@ -8,48 +8,65 @@ for more info : https://www.npmjs.com/package/solgraph
 
 * Install https://github.com/Riyatomar14/Docker
 
-* docker pull devopstestlab/solgraph
-  
-
+```
+docker pull devopstestlab/solgraph
+```
 # create the smart contract in solidity:
-
+```
 $ sudo mkdir data
-
+```
+```
 $ cd data
-
+```
+```
 $ sudo vi MyContracts.sol
+```
 
-Run this smart contract in the docker image we just pulled : docker run -it --rm -v $PWD:/data devopstestlab/solgraph
+Run this smart contract in the docker image we just pulled : 
+```
+docker run -it --rm -v $PWD:/data devopstestlab/solgraph
+```
 
-you can see image by : xdg-open MyContracts.sol.png
+you can see image by : 
+```
+xdg-open MyContracts.sol.png
 
+```
 ![Screenshot 2024-04-06 012012](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/9333164e-74d5-4908-a160-c719473c4570)
 
 # 2. Slither steps-
 
 for more info:https://medium.com/@abhijeet.sinha383/test-solidity-contract-file-using-slither-testing-tool-4f7e3e8692dd
 
-* Pull Docker Image for slither : docker pull trailofbits/eth-security-toolbox
+* Pull Docker Image for slither :
+  ```
+  docker pull trailofbits/eth-security-toolbox
+ ``` 
 
-* Run it : docker run -it --rm -v $PWD:/data trailofbits/eth-security-toolbox
-
+* Run it :
+```
+docker run -it --rm -v $PWD:/data trailofbits/eth-security-toolbox
+```
 ![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/75199822-99bc-4346-903b-2f347c3d9eaa)
 
 * Now open another terminal
 
 * Go to the root directory of the contract file (in my case data)
 
-use cmd : sudo docker container ls to find container id
+use cmd :to find container id
+```
+sudo docker container ls
+```
 
 * This will basically provide you the container ID, image, and other relevant details of the container. We will require the container ID in the next command.
 Now to copy sol file in the container:
-
+```
 sudo docker cp < path to solidity(flatten) file > “put-containner-id”:/<container file path>
-
+```
 Or
-
+```
 sudo docker cp $(pwd)/filename.sol “put-containner-id”:/home/ethsec
-
+```
 ![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/4776a796-6fcc-4c57-a1cd-3748024b3b0c)
 
 * It has basically three components
@@ -63,15 +80,15 @@ iii. container file path (go to the first terminal and write ‘pwd’ to get pr
 So what this command basically does is it will copy the contract file and paste it inside the container environment so that we can run slither commands on it.
 
 Go to the first terminal where the container environment is running. And, write the command:
-
+```
 slither filename.sol
-
+```
 ![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/ec16745a-b262-474c-bd31-e5e7159c2875)
 
 * The second command we will run is:
-  
+  ```
 slither-check-erc filename.sol <contract name in code>
-
+```
 ![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/9d6fbe3c-d73f-4b15-8359-354117cccf10)
 
 * So this command is for those smart contracts that are inheriting ERC features. And this command checks all the ‘must-have’ elements that an ERC token should have.
