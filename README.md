@@ -260,7 +260,7 @@ Navigate to the directory where your solidity contracts are written & execute th
     ```
     ![image](https://github.com/lakshya-chopra/solidity-sec-audit/assets/77010972/e05d45e1-187d-482c-8c7f-3f34e5e79e89)
     
-# 4. Manticore steps- 
+# 5. Manticore steps- 
 
 ## pull the docker image for manticore
 
