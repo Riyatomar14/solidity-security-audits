@@ -4,9 +4,11 @@
 
 ## pre-requisites
 
+for more info : https://www.npmjs.com/package/solgraph 
+
 * Install https://github.com/Riyatomar14/Docker
 
-* Pull https://www.npmjs.com/package/solgraph : docker pull devopstestlab/solgraph
+* docker pull devopstestlab/solgraph
   
 
 # create the smart contract in solidity:
@@ -24,6 +26,8 @@ you can see image by : xdg-open MyContracts.sol.png
 ![Screenshot 2024-04-06 012012](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/9333164e-74d5-4908-a160-c719473c4570)
 
 # 2. Slither steps-
+
+for more info:https://medium.com/@abhijeet.sinha383/test-solidity-contract-file-using-slither-testing-tool-4f7e3e8692dd
 
 * Pull Docker Image for slither : docker pull trailofbits/eth-security-toolbox
 
@@ -74,9 +78,14 @@ slither-check-erc filename.sol <contract name in code>
 
 # 3. Mythril steps-
 
+for more info : https://mythril-classic.readthedocs.io/en/master/installation.html
+
+
 
 
 # 4. Surya steps-
+
+for more info: https://github.com/Consensys/surya
 
 
 
