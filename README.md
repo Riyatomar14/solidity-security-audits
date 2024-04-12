@@ -1,5 +1,7 @@
 # solidity-security-audits
 
+# 1.solgraph steps-
+
 ## pre-requisites
 
 * Install https://github.com/Riyatomar14/Docker
@@ -21,7 +23,7 @@ you can see image by : xdg-open MyContracts.sol.png
 
 ![Screenshot 2024-04-06 012012](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/9333164e-74d5-4908-a160-c719473c4570)
 
-# Slither steps-
+# 2. Slither steps-
 
 * Pull Docker Image for slither : docker pull trailofbits/eth-security-toolbox
 
@@ -69,6 +71,12 @@ slither-check-erc filename.sol <contract name in code>
 ![image](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/9d6fbe3c-d73f-4b15-8359-354117cccf10)
 
 * So this command is for those smart contracts that are inheriting ERC features. And this command checks all the ‘must-have’ elements that an ERC token should have.
+
+# 3. Mythril steps-
+
+
+
+# 4. Surya steps-
 
 
 
