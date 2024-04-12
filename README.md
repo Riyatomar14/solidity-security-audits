@@ -24,6 +24,31 @@ cd data
 sudo vi MyContracts.sol
 ```
 
+```
+contract MyContract {
+    uint balance;
+
+    function MyContract() {
+      Mint(1000000);
+   }
+
+   function Mint(uint amount)
+ internal {
+     balance = amount;
+}
+
+  function Withdraw() {
+     msg.sender.send(balance);
+}
+
+
+  function GetBalance() constant 
+returns(uint) {
+  return balance;
+ }
+}
+```
+
 Run this smart contract in the docker image we just pulled : 
 
 ```
@@ -131,6 +156,7 @@ sudo apt install libssl-dev python3-dev python3-pip
 pip3 install mythril
 myth version
 ```
+![Screenshot 2024-04-12 200610](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/bd38cbe5-b479-43fe-9a9d-6257cd356d18)
 
 ## Docker
 
@@ -138,6 +164,7 @@ myth version
 # Pull the latest release of mythril/myth
 $ docker pull mythril/myth
 ```
+![Screenshot 2024-04-12 200654](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/4af79c5d-5a23-4d6f-841c-24771f5d16e4)
 
 ## Use docker run mythril/myth the same way you would use the myth command
 
@@ -197,6 +224,8 @@ contract Exceptions {
 docker run -v $(pwd):/tmp mythril/myth analyze /tmp/Riya.sol
 ```
 *(in my case my directory--> Riya)
+
+![Screenshot 2024-04-12 200721](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/3d54d312-bf1b-469d-a9de-84062d46adbb)
 
 # 4. Surya steps-
 
