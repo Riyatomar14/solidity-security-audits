@@ -1,6 +1,6 @@
 # solidity-security-audits
 
-# 1.solgraph steps-
+# 1. solgraph steps-
 
 ## pre-requisites
 
