@@ -234,31 +234,64 @@ for more info: https://github.com/Consensys/surya
 ## Surya install
 
 Pre-requisites:
+
 ```
-NodeJS
-NPM
+sudo apt install npm
 ```
-Install Surya using npm:
+
+## Install Surya using npm:
+
 ```
 npm install -g surya
 ```
-Navigate to the directory where your solidity contracts are written & execute the following commands:
+## make directory
 
-  - Parse your smart contract (create a tree like structure)
-    ```
-    surya parse mycontract.sol
-    ```
-    ![image](https://github.com/lakshya-chopra/solidity-sec-audit/assets/77010972/a531c013-3302-4eef-a2a1-4332e78d978c)
+ ```
+mkdir audits
+ ```
 
-  - Flatten:
-    ```
-    surya flatten mycontract.sol
-    ```
-  - Describe (give a concise summary)
-    ```
-    surya describe mycontract.sol
-    ```
-    ![image](https://github.com/lakshya-chopra/solidity-sec-audit/assets/77010972/e05d45e1-187d-482c-8c7f-3f34e5e79e89)
+## change directory
+
+```
+cd audits
+```
+
+## run command 
+
+```
+sudo vi storage.sol
+```
+## And then write the smart contract and save the contract file with .sol extension.(for example storage.sol)
+
+```
+pragma solidity >= 0.5.0 < 0.9.0;
+contract local {
+uint age = 10;
+function getter() public view returns(uint) {
+return age;
+}
+function setter() public {
+age = age + 1;
+}
+} 
+```
+## then run the command
+
+```
+surya parse storage.sol
+```
+* Parse : The parse command outputs a treefied AST object coming from the parser.
+
+   
+## Flatten:
+
+```
+surya flatten storage.sol
+```
+* Flatten : The flatten command outputs a flattened version of the source code, with all import statements replaced by the corresponding source code. Import statements that reference a file that has already been imported, will simply be commented out.
+
+ 
+ 
     
 # 5. Manticore steps- 
 
