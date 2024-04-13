@@ -244,6 +244,9 @@ sudo apt install npm
 ```
 npm install -g surya
 ```
+
+![Screenshot 2024-04-13 081741](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/0cbde1b2-016e-44c5-bc93-d12711b65bcd)
+
 ## make directory
 
  ```
@@ -289,6 +292,10 @@ surya parse storage.sol
 surya flatten storage.sol
 ```
 * Flatten : The flatten command outputs a flattened version of the source code, with all import statements replaced by the corresponding source code. Import statements that reference a file that has already been imported, will simply be commented out.
+  
+![Screenshot 2024-04-13 081535](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/ee6004c8-e5d5-417c-b525-ad73216553d9)
+![Screenshot 2024-04-13 081549](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/ef3ba986-59f3-4591-a66c-30e6e0bc860f)
+![Screenshot 2024-04-13 081619](https://github.com/Riyatomar14/solidity-security-audits/assets/143107173/1bcc3cad-1c14-4aa6-804c-9564bbd97719)
 
  
  
